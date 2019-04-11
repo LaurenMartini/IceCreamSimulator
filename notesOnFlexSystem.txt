@@ -1,0 +1,46 @@
+FlexSystem (main code base referenced by all other files)
+header variables:
+- solver is set to nullptr
+- memoryType variable of some kind used?
+- parameters
+- substeps is initialized to 3
+- positions vector (Vector4)
+- velocities vector (Vector3)
+- phases vector (int)
+- restPositions of particles vector (Vector4)
+- rigid offsets vector (int) -> used to store how many particles are in 
+	which cluster
+- rigid indices vector (int) -> indices to assign particles to a cluster
+- rigidTranslations vector (Vector3)
+- rigidRotations vector (Vector4)
+- rigidCoefficients vector (float)
+- springIndices vector (int)
+- springStiffness vector (float)
+- springLengths vector (float)
+- shapeStarts vector (int) -> for collision geo
+- shapeAabbMin vector, shapeAabbMax vector, shapePositions vector, 
+	shapeRotations vector, shapePrevPositions vector, shapePrveRotations 
+	vector (Vector4)
+- shapeGeometry vector (FlexCollisionGeometry)
+- shapeFlags vector (int)
+
+CPP file for FlexSystem:
+-constructor pushes 0 onto rigid offsets vector
+-destructor just destroys the solver (as it was a pointer)
+-initialize the solver: destroy previous one if it exists, then create a 
+	new one
+-fetch data, update solver, update data, upload data
+-set default parameters (this is where we could set the default scales for
+	our GUI)
+
+Good Starting Code:
+-Project 2 Mesh Editor
+
+Classes We Need:
+-MeshManipulation (import mesh, call ParticleBody)
+-ParticleBody (our version of soft body creation from mesh, voxelize mesh)
+-Skinning (calculates the combo of particles with mesh based on weight and 
+	vertex)
+-Solver (connects)
+-MelingSim
+-Collisions
