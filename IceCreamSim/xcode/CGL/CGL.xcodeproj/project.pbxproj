@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		48C74ED3230242D89739C4BC /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 36B1CDC6E2AA4511A43F52FE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4607043BF9574412B48E7A1B /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8F6A783261FE4A689FE685C0 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A8E11C340D63456E94C934F5 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				49CF60B261944FAA95F2F054 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				917F4A5E8CCD4741B98C79AD /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		F1354BEC2DE840ED82D43D60 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EAD507C61FB24259BE603A2A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				E8C5B7DF9C6B48D89D8A0FAE /* CMake Rules */,
+			);
+			dependencies = (
+				86A5DF168EBF4211B9C8782F /* PBXTargetDependency */,
+				12C53FFE262C45459C4B9FEA /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		08CA17EB6A9A42E68B270F6D /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/complex.cpp */ = {isa = PBXBuildFile; fileRef = 636C4C2C7C0B46B4AB662AAE /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/complex.cpp */; };
+		0D45B57AA82B4ABA911FB1B2 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector4D.cpp */ = {isa = PBXBuildFile; fileRef = AA1BB8C44A234A22830F8D6C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector4D.cpp */; };
+		4E0333BF66694DA199449602 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/lodepng.cpp */ = {isa = PBXBuildFile; fileRef = 7B91C8BC38BD45A7833A6A44 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/lodepng.cpp */; };
+		520D94459E71454AAF1C35C5 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix3x3.cpp */ = {isa = PBXBuildFile; fileRef = 31398A12DDAB4107944CA56C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix3x3.cpp */; };
+		7D1A6509367D48D68BC367B5 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/spectrum.cpp */ = {isa = PBXBuildFile; fileRef = 8EDECC610916446695F8585B /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/spectrum.cpp */; };
+		ADB214E89B6640B784EDA675 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = F1DF62E1CB2E490AA6355C19 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/tinyxml2.cpp */; };
+		C03887492D704FA0A22861A3 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/base64.cpp */ = {isa = PBXBuildFile; fileRef = 8E1CA139FA2047FB8EDA71FD /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/base64.cpp */; };
+		C180165B42F0477A8E8C18A3 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector2D.cpp */ = {isa = PBXBuildFile; fileRef = 06ACB1B7C023424DB796736C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector2D.cpp */; };
+		ECEA023F58A6429AA6A0F336 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/quaternion.cpp */ = {isa = PBXBuildFile; fileRef = E192B5E49B0D41F18DE23354 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/quaternion.cpp */; };
+		F574E5FF649C4ECF9E37C644 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/color.cpp */ = {isa = PBXBuildFile; fileRef = 1A84924E53D1453E9858CE13 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/color.cpp */; };
+		F71AFCF46533457ABF1A3C98 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5FE6E0897686493EB6717901 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/CMakeLists.txt */; };
+		F7BB2D9CBDFD4556ACCD0C75 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix4x4.cpp */ = {isa = PBXBuildFile; fileRef = 94F9D8C6199644E98756F4E9 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix4x4.cpp */; };
+		FF519A38D3504120BED54E34 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector3D.cpp */ = {isa = PBXBuildFile; fileRef = 369FFA0E47FC462DA8722030 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector3D.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		48777B5041AF46158DEEBD4E /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		A241BFDE5A4544EAAA08E25A /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		E6B86221F85949F5BB6FC99C /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		F3CF942A165C4742BFB28F84 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		01E821722A4A480B8FF5EC27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C42BDDA60B3485C98C9128D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C74ED3230242D89739C4BC;
+			remoteInfo = ZERO_CHECK;
+		};
+		92FBD018D91D421790A640B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C42BDDA60B3485C98C9128D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1354BEC2DE840ED82D43D60;
+			remoteInfo = ALL_BUILD;
+		};
+		A5DEEA6C84514F349CCDE049 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C42BDDA60B3485C98C9128D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AF0093730CD4B2C965E6FA0;
+			remoteInfo = CGL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F528C61DA14EE89A8C1A3C /* CGL */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCGL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		06ACB1B7C023424DB796736C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector2D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector2D.cpp; path = src/vector2D.cpp; sourceTree = SOURCE_ROOT; };
+		1A84924E53D1453E9858CE13 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/color.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = color.cpp; path = src/color.cpp; sourceTree = SOURCE_ROOT; };
+		31398A12DDAB4107944CA56C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix3x3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix3x3.cpp; path = src/matrix3x3.cpp; sourceTree = SOURCE_ROOT; };
+		369FFA0E47FC462DA8722030 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector3D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3D.cpp; path = src/vector3D.cpp; sourceTree = SOURCE_ROOT; };
+		5FE6E0897686493EB6717901 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		636C4C2C7C0B46B4AB662AAE /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/complex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complex.cpp; path = src/complex.cpp; sourceTree = SOURCE_ROOT; };
+		7B91C8BC38BD45A7833A6A44 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/lodepng.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lodepng.cpp; path = src/lodepng.cpp; sourceTree = SOURCE_ROOT; };
+		8E1CA139FA2047FB8EDA71FD /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/base64.cpp; sourceTree = SOURCE_ROOT; };
+		8EDECC610916446695F8585B /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/spectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spectrum.cpp; path = src/spectrum.cpp; sourceTree = SOURCE_ROOT; };
+		94F9D8C6199644E98756F4E9 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix4x4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix4x4.cpp; path = src/matrix4x4.cpp; sourceTree = SOURCE_ROOT; };
+		AA1BB8C44A234A22830F8D6C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector4D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector4D.cpp; path = src/vector4D.cpp; sourceTree = SOURCE_ROOT; };
+		C203344FCBBF41B596E11376 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E192B5E49B0D41F18DE23354 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/quaternion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = quaternion.cpp; path = src/quaternion.cpp; sourceTree = SOURCE_ROOT; };
+		F1DF62E1CB2E490AA6355C19 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		154B66E80311466F9622020E /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		2B93F2F393BA4834A37607C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05F528C61DA14EE89A8C1A3C /* CGL */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E1802ACC81348D5B32B2B98 = {
+			isa = PBXGroup;
+			children = (
+				52103151DABC454FAAD87A61 /* ALL_BUILD */,
+				DAE3E1A8AC2A485D9D8A3528 /* CGL */,
+				2B93F2F393BA4834A37607C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52103151DABC454FAAD87A61 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				154B66E80311466F9622020E /* CMake Rules */,
+				C203344FCBBF41B596E11376 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		B967C646DF0747A2B0E5BEFF /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E1CA139FA2047FB8EDA71FD /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/base64.cpp */,
+				1A84924E53D1453E9858CE13 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/color.cpp */,
+				636C4C2C7C0B46B4AB662AAE /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/complex.cpp */,
+				7B91C8BC38BD45A7833A6A44 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/lodepng.cpp */,
+				31398A12DDAB4107944CA56C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix3x3.cpp */,
+				94F9D8C6199644E98756F4E9 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix4x4.cpp */,
+				E192B5E49B0D41F18DE23354 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/quaternion.cpp */,
+				8EDECC610916446695F8585B /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/spectrum.cpp */,
+				F1DF62E1CB2E490AA6355C19 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/tinyxml2.cpp */,
+				06ACB1B7C023424DB796736C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector2D.cpp */,
+				369FFA0E47FC462DA8722030 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector3D.cpp */,
+				AA1BB8C44A234A22830F8D6C /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector4D.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		DAE3E1A8AC2A485D9D8A3528 /* CGL */ = {
+			isa = PBXGroup;
+			children = (
+				B967C646DF0747A2B0E5BEFF /* Source Files */,
+				5FE6E0897686493EB6717901 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/CMakeLists.txt */,
+			);
+			name = CGL;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AF0093730CD4B2C965E6FA0 /* CGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F7A5D764254D9B81A241CB /* Build configuration list for PBXNativeTarget "CGL" */;
+			buildPhases = (
+				9327D3FD525B4913ABE76B8D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGL;
+			productName = CGL;
+			productReference = 05F528C61DA14EE89A8C1A3C /* CGL */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C42BDDA60B3485C98C9128D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = DE44F8F599254BA2A3E42447 /* Build configuration list for PBXProject "CGL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				E6B86221F85949F5BB6FC99C /* Debug */,
+				F3CF942A165C4742BFB28F84 /* Release */,
+				48777B5041AF46158DEEBD4E /* MinSizeRel */,
+				A241BFDE5A4544EAAA08E25A /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 2E1802ACC81348D5B32B2B98;
+			projectDirPath = ../../CGL;
+			projectRoot = "";
+			targets = (
+				F1354BEC2DE840ED82D43D60 /* ALL_BUILD */,
+				7AF0093730CD4B2C965E6FA0 /* CGL */,
+				48C74ED3230242D89739C4BC /* ZERO_CHECK */,
+				8F6A783261FE4A689FE685C0 /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		068FDA791A874428B2D71BB7 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		15EFD6D36AEB4B70B52B64FF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4607043BF9574412B48E7A1B /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL -f /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		49CF60B261944FAA95F2F054 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL -f /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		A2B88FD2D8FD4E3284335EA4 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E8C5B7DF9C6B48D89D8A0FAE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL -f /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9327D3FD525B4913ABE76B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C03887492D704FA0A22861A3 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/base64.cpp */,
+				F574E5FF649C4ECF9E37C644 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/color.cpp */,
+				08CA17EB6A9A42E68B270F6D /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/complex.cpp */,
+				4E0333BF66694DA199449602 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/lodepng.cpp */,
+				520D94459E71454AAF1C35C5 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix3x3.cpp */,
+				F7BB2D9CBDFD4556ACCD0C75 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/matrix4x4.cpp */,
+				ECEA023F58A6429AA6A0F336 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/quaternion.cpp */,
+				7D1A6509367D48D68BC367B5 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/spectrum.cpp */,
+				ADB214E89B6640B784EDA675 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/tinyxml2.cpp */,
+				C180165B42F0477A8E8C18A3 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector2D.cpp */,
+				FF519A38D3504120BED54E34 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector3D.cpp */,
+				0D45B57AA82B4ABA911FB1B2 /* /Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/src/vector4D.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12C53FFE262C45459C4B9FEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AF0093730CD4B2C965E6FA0 /* CGL */;
+			targetProxy = A5DEEA6C84514F349CCDE049 /* PBXContainerItemProxy */;
+		};
+		86A5DF168EBF4211B9C8782F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C74ED3230242D89739C4BC /* ZERO_CHECK */;
+			targetProxy = 01E821722A4A480B8FF5EC27 /* PBXContainerItemProxy */;
+		};
+		917F4A5E8CCD4741B98C79AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1354BEC2DE840ED82D43D60 /* ALL_BUILD */;
+			targetProxy = 92FBD018D91D421790A640B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07FDB292F343451EA7FFE6B5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		12B105F3AAD0460F8B93F9EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		2765F3FD8B9141AF97D84529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",NANOGUI_SHARED,NVG_SHARED,GLAD_GLAPI_EXPORT,NANOGUI_GLAD);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include",/Library/Frameworks/Mono.framework/Headers,/usr/local/include/freetype2,"/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glad/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glfw/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/nanovg/src","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/eigen","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64        -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		318CC7A471474BB48E03D668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/build";
+			};
+			name = Release;
+		};
+		3FB7F174772046EA80B96240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		52168BE953294AE89346AEF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5AD5724F825247198EA9678E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",NANOGUI_SHARED,NVG_SHARED,GLAD_GLAPI_EXPORT,NANOGUI_GLAD);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include",/Library/Frameworks/Mono.framework/Headers,/usr/local/include/freetype2,"/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glad/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glfw/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/nanovg/src","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/eigen","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64        -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6505A39D126B4808A1CCDB3C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/build";
+			};
+			name = MinSizeRel;
+		};
+		6D169D8EE2574B48863B1FDC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		95AF096C9BF24F3E8988BB85 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A4E45D67883D48B58392A0C0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AA2C91089FFE4861AD388277 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/build";
+			};
+			name = RelWithDebInfo;
+		};
+		B30A01A3F86E4FDC951FBEB0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BA91962AED704A2B899462E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		BBC1F5D34AEB479AB0826975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",NANOGUI_SHARED,NVG_SHARED,GLAD_GLAPI_EXPORT,NANOGUI_GLAD);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include",/Library/Frameworks/Mono.framework/Headers,/usr/local/include/freetype2,"/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glad/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glfw/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/nanovg/src","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/eigen","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64       -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BD955EC937A848BAA09C0290 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D455344280BF423EB1FD2A8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		D4CEC37AB07448809C5CA68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/build";
+			};
+			name = Debug;
+		};
+		E694F6E5224C4FDEBCF06033 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",NANOGUI_SHARED,NVG_SHARED,GLAD_GLAPI_EXPORT,NANOGUI_GLAD);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include",/Library/Frameworks/Mono.framework/Headers,/usr/local/include/freetype2,"/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glad/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/glfw/include","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/nanovg/src","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/ext/nanogui/ext/eigen","/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64           -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F58782255BC44F1BB3045FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/natkham/Desktop/cs184/projects/p4-clothsim-natkham/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34F7A5D764254D9B81A241CB /* Build configuration list for PBXNativeTarget "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC1F5D34AEB479AB0826975 /* Debug */,
+				2765F3FD8B9141AF97D84529 /* Release */,
+				5AD5724F825247198EA9678E /* MinSizeRel */,
+				E694F6E5224C4FDEBCF06033 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		36B1CDC6E2AA4511A43F52FE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D455344280BF423EB1FD2A8F /* Debug */,
+				12B105F3AAD0460F8B93F9EF /* Release */,
+				A4E45D67883D48B58392A0C0 /* MinSizeRel */,
+				6D169D8EE2574B48863B1FDC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A8E11C340D63456E94C934F5 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB7F174772046EA80B96240 /* Debug */,
+				BA91962AED704A2B899462E4 /* Release */,
+				BD955EC937A848BAA09C0290 /* MinSizeRel */,
+				95AF096C9BF24F3E8988BB85 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DE44F8F599254BA2A3E42447 /* Build configuration list for PBXProject "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4CEC37AB07448809C5CA68F /* Debug */,
+				318CC7A471474BB48E03D668 /* Release */,
+				6505A39D126B4808A1CCDB3C /* MinSizeRel */,
+				AA2C91089FFE4861AD388277 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EAD507C61FB24259BE603A2A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52168BE953294AE89346AEF6 /* Debug */,
+				F58782255BC44F1BB3045FA1 /* Release */,
+				B30A01A3F86E4FDC951FBEB0 /* MinSizeRel */,
+				07FDB292F343451EA7FFE6B5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C42BDDA60B3485C98C9128D /* Project object */;
+}
