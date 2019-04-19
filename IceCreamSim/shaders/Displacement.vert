@@ -3,8 +3,8 @@
 uniform mat4 u_view_projection;
 uniform mat4 u_model;
 
-uniform sampler2D u_texture_3;
-uniform vec2 u_texture_3_size;
+uniform sampler2D u_texture_2;
+uniform vec2 u_texture_2_size;
 
 uniform float u_normal_scaling;
 uniform float u_height_scaling;
@@ -21,19 +21,23 @@ out vec4 v_tangent;
 
 float h(vec2 uv) {
   // You may want to use this helper function...
-    vec4 tex = texture(u_texture_3, uv);
-    float r = tex.r;
-    return r;
+  return texture(u_texture_2, uv).r;
 }
 
 void main() {
   // YOUR CODE HERE
-    
-    vec4 inP = in_position + in_normal * h(v_uv) * u_height_scaling * normalize(v_normal);
-    v_position = u_model * inP;
+  
   // (Placeholder code. You will want to replace it.)
+  //given code
+  //v_position = u_model * in_position;
   v_normal = normalize(u_model * in_normal);
   v_uv = in_uv;
   v_tangent = normalize(u_model * in_tangent);
-  gl_Position = u_view_projection * u_model * inP;
+    
+    //added these lines to create displacement of vertices
+    vec4 pPrime = in_position + v_normal * h(v_uv) * u_height_scaling;
+    //update position
+    v_position = u_model * pPrime;
+    
+  gl_Position = u_view_projection * u_model * pPrime;
 }

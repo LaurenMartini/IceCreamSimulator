@@ -1,0 +1,143 @@
+//check edge cases
+            if (j == 0) { //top row
+                if (i == 0) { //first column
+                    //structural (NOT POSSIBLE)
+                    //shearing (NOT POSSIBLE)
+                    //bending (NOT POSSIBLE)
+                    continue; //no springs can be created
+                } else if (i == num_width_points) {
+                    //last column
+                    //structural (left possible but not above)
+                    //get left pm and create a null point mass for above
+                    PointMass *pLeft = pCurr - 1;//&point_masses[j * num_width_points + (i - 1)];
+                    Spring structuralLeft = Spring(pCurr, pLeft, 0);
+                    springs.push_back(structuralLeft);
+                    
+                    //shearing (NOT POSSIBLE)
+                    
+                    //bending (check if left is possible but above is not)
+                    if ((i - 2) >= 0) {
+                        PointMass *p2Left = pCurr - 2;//&point_masses[j * num_width_points + (i - 2)];
+                        Spring bendingLeft = Spring(pCurr, p2Left, 2);
+                        springs.push_back(bendingLeft);
+                    }
+                } else {
+                    //any other column between 0 and num_width_points
+                    //structural (left possible but not above)
+                    //get left pm and create a null point mass for above
+                    PointMass *pLeft = pCurr - 1;//&point_masses[j * num_width_points + (i - 1)];
+                    Spring structuralLeft = Spring(pCurr, pLeft, 0);
+                    springs.push_back(structuralLeft);
+                    
+                    //shearing (NOT POSSIBLE)
+                    
+                    //bending (check if left is possible but above is not)
+                    if ((i - 2) >= 0) {
+                        PointMass *p2Left = pCurr - 2; //&point_masses[j * num_width_points + (i - 2)];
+                        Spring bendingLeft = Spring(pCurr, p2Left, 2);
+                        springs.push_back(bendingLeft);
+                    }
+                }
+            } else if (j == num_height_points) {//last row
+                if (i == 0) { //first column
+                    //structural (left is not possible, above is possible)
+                    PointMass *pAbove = &point_masses[(j - 1) * num_width_points + i];
+                    Spring structuralAbove = Spring(pCurr, pAbove, 0);
+                    springs.push_back(structuralAbove);
+                    
+                    //shearing (diagonal upper right, diagonal upper left is not possible)
+                    PointMass *pDRight = &point_masses[(j - 1) * num_width_points + i];
+                    Spring shearingRight = Spring(pCurr, pDRight, 1);
+                    springs.push_back(shearingRight);
+                    
+                    //bending (check if there are 2 above, 2 left is not possible)
+                    if ((j - 2) >= 0) {
+                        PointMass *p2Above = &point_masses[(j - 2) * num_width_points + i];
+                        Spring bendingAbove = Spring(pCurr, p2Above, 2);
+                        springs.push_back(bendingAbove);
+                    }
+                } else if (i == num_width_points) { //last column
+                    //structural (left and above)
+                    PointMass *pLeft = pCurr - 1;//&point_masses[j * num_width_points + (i - 1)];
+                    PointMass *pAbove = &point_masses[(j - 1) * num_width_points + i];
+                    Spring structuralLeft = Spring(pCurr, pLeft, 0);
+                    Spring structuralAbove = Spring(pCurr, pAbove, 0);
+                    springs.push_back(structuralLeft);
+                    springs.push_back(structuralAbove);
+                    
+                    //shearing (diagonal upper left but upper right is not possible)
+                    PointMass *pDLeft = &point_masses[(j - 2) * num_width_points + (i - 1)];
+                    Spring shearingLeft = Spring(pCurr, pDLeft, 1);
+                    springs.push_back(shearingLeft);
+                    
+                    //bending (2 to left and 2 above)
+                    if ((i - 2) >= 0) {
+                        PointMass *p2Left = pCurr - 2;//&point_masses[j * num_width_points + (i - 2)];
+                        Spring bendingLeft = Spring(pCurr, p2Left, 2);
+                        springs.push_back(bendingLeft);
+                    }
+                    if ((j - 2) >= 0) {
+                        PointMass *p2Above = pCurr - 2;//&point_masses[j * num_width_points + (i - 2)];
+                        Spring bendingLeft = Spring(pCurr, p2Above, 2);
+                        springs.push_back(bendingLeft);
+                    }
+                } else {
+                    //any other column between 0 and num_width_points
+                    //structural (left and above)
+                    PointMass *pLeft = &point_masses[j * num_width_points + (i - 1)];
+                    PointMass *pAbove = &point_masses[(j - 1) * num_width_points + i];
+                    Spring structuralLeft = Spring(pCurr, pLeft, 0);
+                    Spring structuralAbove = Spring(pCurr, pAbove, 0);
+                    springs.push_back(structuralLeft);
+                    springs.push_back(structuralAbove);
+                    
+                    //shearing (diagonal upper left and diagonal upper right)
+                    PointMass *pDLeft = &point_masses[(j - 2) * num_width_points + (i - 1)];
+                    Spring shearingLeft = Spring(pCurr, pDLeft, 1);
+                    springs.push_back(shearingLeft);
+                    
+                    PointMass *pDRight = &point_masses[(j - 2) * num_width_points + (i + 1)];
+                    Spring shearingRight = Spring(pCurr, pDRight, 1);
+                    springs.push_back(shearingRight);
+                    
+                    //bending (2 to left and 2 above)
+                    if ((i - 2) >= 0) {
+                        PointMass *p2Left = &point_masses[j * num_width_points + (i - 2)];
+                        Spring bendingLeft = Spring(pCurr, p2Left, 2);
+                        springs.push_back(bendingLeft);
+                    }
+                    if ((j - 2) >= 0) {
+                        PointMass *p2Above = &point_masses[j * num_width_points + (i - 2)];
+                        Spring bendingLeft = Spring(pCurr, p2Above, 2);
+                        springs.push_back(bendingLeft);
+                    }
+                }
+            } else {
+                //middle points
+                //structural (left and above)
+                PointMass *pLeft = &point_masses[j * num_width_points + (i - 1)];
+                PointMass *pAbove = &point_masses[(j - 1) * num_width_points + i];
+                Spring structuralLeft = Spring(pCurr, pLeft, 0);
+                Spring structuralAbove = Spring(pCurr, pAbove, 0);
+                
+                //shearing (diagonal upper left and diagonal upper right)
+                PointMass *pDLeft = &point_masses[(j - 1) * num_width_points + (i - 1)];
+                PointMass *pDRight = &point_masses[(j - 1) * num_width_points + (i + 1)];
+                Spring shearingLeft = Spring(pCurr, pDLeft, 1);
+                Spring shearingRight = Spring(pCurr, pDRight, 1);
+                
+                //bending (two to the left and two above)
+                PointMass *p2Left = &point_masses[j * num_width_points + (i - 2)];
+                PointMass *p2Above = &point_masses[(j - 2) * num_width_points + i];
+                Spring bendingLeft = Spring(pCurr, p2Left, 2);
+                Spring bendingAbove = Spring(pCurr, p2Above, 2);
+                
+                //add to cloth spring vector
+                springs.push_back(structuralLeft);
+                springs.push_back(structuralAbove);
+                springs.push_back(shearingLeft);
+                springs.push_back(shearingRight);
+                springs.push_back(bendingLeft);
+                springs.push_back(bendingAbove);
+            }
+        }

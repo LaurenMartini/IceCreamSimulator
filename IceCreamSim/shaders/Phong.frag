@@ -13,31 +13,36 @@ out vec4 out_color;
 
 void main() {
   // YOUR CODE HERE
-    float ka = 0.01;
-    vec3 ia = vec3(0.25, 0.25, 0.25);
+    float ka = 0.1;
     float kd = 1.0;
     float ks = 0.5;
-    float p = 100.0;
+    vec3 ia = vec3(1.0, 1.0, 1.0);
     
-    vec3 i = u_light_intensity;
-    float r = distance(vec4(u_light_pos, 1.0), v_position);
-    vec3 i_r2 = i / (r * r);
+    float p = 200.0;
     
-    vec4 l = vec4(u_light_pos, 1.0) - v_position;
-    l = normalize(l);
-    vec4 n = normalize(v_normal);
-    float dotNL = dot(n, l);
-
-    vec4 v = vec4(u_cam_pos, 1.0) - v_position;
-    v = normalize(v);
-    vec4 h = v + l;
-    h = normalize(h);
-    float dotNH = dot(n, h);
+    vec3 n_lightIntensity = normalize(u_light_intensity);
+    vec3 n_lightPos = normalize(u_light_pos);
+    vec3 n_camPos = normalize(u_cam_pos);
+    vec3 n_normal = normalize(vec3(v_normal));
+    vec3 pos3 = vec3(v_position);
     
-    vec3 x_y_z = (ka * ia) + (kd * i_r2 * max(0.0, dotNL)) + (ks * i_r2 * pow(max(0.0, dotNH), p));
-    out_color.xyz = x_y_z;
-  
-  // (Placeholder code. You will want to replace it.)
-  out_color.a = 1;
+    //create l and v to find h
+    vec3 l = normalize(u_light_pos - pos3);
+    vec3 v = normalize(u_cam_pos - pos3);
+    
+    //calculate h from l and v like in the slides
+    vec3 h = normalize(l + v);
+    
+    // (Placeholder code. You will want to replace it.)
+    //combo
+    out_color = vec4(((ka * ia) + (kd * n_lightIntensity * max(0, dot(n_normal, l))) + (ks * n_lightIntensity * pow(max(0, dot(n_normal, h)), p))), 1.0);
+    //just ambient
+    //out_color = vec4((ka * ia), 1.0);
+    //just diffuse
+    //out_color = vec4((kd * n_lightIntensity * max(0, dot(n_normal, l))), 1.0);
+    //just specular
+    //out_color = vec4((ks * n_lightIntensity * pow(max(0, dot(n_normal, h)), p)), 1.0);
+    out_color *= u_color;
+    out_color.a = 1;
 }
 

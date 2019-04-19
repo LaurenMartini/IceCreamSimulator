@@ -26,24 +26,10 @@ out vec4 out_color;
 
 void main() {
   // YOUR CODE HERE
-    
-    float kd = 1.0;
-    vec3 i = u_light_intensity;
-    vec4 light_pos = vec4(u_light_pos, 1);
-    float r = distance(light_pos, v_position);
-    vec4 n = v_normal;
-
-    light_pos = normalize(light_pos);
-//    n = normalize(v_normal);
-
-    float dotNL = dot(n, light_pos);
-
-    vec3 rgb = kd * (i / (r * r)) * max(0.0, dotNL);
-
-    out_color.xyz = rgb;
-    out_color.a = 1.0;
+  out_color = (vec4(1, 1, 1, 0) * vec4(normalize(u_light_intensity), 0.0) * max(0, dot(normalize(vec4(u_light_pos, 0.0)), normalize(v_normal))));
     
   // (Placeholder code. You will want to replace it.)
 //  out_color = (vec4(1, 1, 1, 0) + v_normal) / 2;
-//  out_color.a = 1;
+//    out_color.r =
+  out_color.a = 1;
 }

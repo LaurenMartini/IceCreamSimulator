@@ -44,3 +44,7 @@ Classes We Need:
 -Solver (connects)
 -MelingSim
 -Collisions
+
+Variables we might need:
+particle count (density of particles created)
+voxel vector

@@ -29,9 +29,31 @@ in vec4 v_tangent;
 in vec2 v_uv;
 
 out vec4 out_color;
+out vec4 n_lightIntensity;
+out vec4 n_lightPos;
+out vec4 ka;
+out vec4 kd;
+out vec4 ks;
+out vec4 ia;
+out vec4 h;
 
 void main() {
   // Your awesome shader here!
-  out_color = (vec4(1, 1, 1, 0) + v_normal) / 2;
-  out_color.a = 1;
+    //transparent effect!
+    ka = vec4(1.0, 1.0, 1.0, 0.0);
+    kd = vec4(0.5, 0.5, 0.5, 0.0);
+    ks = vec4(0.1, 0.1, 0.1, 0.0);
+    ia = vec4(0.3, 0.3, 0.3, 0.0);
+
+    n_lightIntensity = normalize(vec4(u_light_intensity, 0.0));
+    n_lightPos = normalize(vec4(u_light_pos, 0.0));
+
+    h = normalize(normalize(vec4(u_light_pos, 0.0) - v_position) + v_position);
+    //    h = vec4(1, 1, 1, 0);
+
+    // (Placeholder code. You will want to replace it.)
+    out_color = (ka * ia) + (kd * vec4(u_light_intensity, 0.0) * max(0, dot(normalize(v_normal), n_lightPos))) + (ks * vec4(u_light_intensity, 0.0) * max(0, dot(normalize(v_normal), h)) * max(0, dot(normalize(v_normal), h)));
+    out_color.a = 1;
+//  out_color = (vec4(1, 1, 1, 0) + v_normal) / 2;
+//  out_color.a = 1;
 }

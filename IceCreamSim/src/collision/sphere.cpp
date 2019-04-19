@@ -9,21 +9,27 @@ using namespace CGL;
 
 void Sphere::collide(PointMass &pm) {
   // TODO (Part 3): Handle collisions with spheres.
-    Vector3D pm_pos = pm.position;
-    Vector3D distance = pm_pos - this->origin;
-    double dist_norm = distance.norm();
-    Vector3D direction = distance;
-    direction.normalize();
-    
-    // CHECK IF INTERSECTS OR INSIDE SPHERE
-    if (dist_norm < this->radius) {
-//        direction.normalize();
-        Vector3D tangentP = this->origin + (direction * this->radius);
-        Vector3D lastPos = pm.last_position;
-        Vector3D correction = (1.0 - this->friction) * (tangentP - lastPos);
+    //1. Compute where the point mass should have intersected the sphere
+    //   by extending the path between its 'position' and the sphere's origin
+    //   to the sphere's surface.
+    //   Call the surface intersection point the tangent point
+    Vector3D distancePMtoOrigin = pm.position - origin;
+    //check to see if this is inside the radius or not
+    if (distancePMtoOrigin.norm() > radius) {
+        return;
+    } else {
+        //normalize the point
+        distancePMtoOrigin.normalize();
+        //adjust from origin
+        Vector3D tangentPoint = (radius * distancePMtoOrigin) + origin;
         
-        Vector3D newPos = lastPos + correction;
-        pm.position = newPos;
+        //2. Compute the correction vector needed to be applied to the point mass's
+        //   last_position in order to reach the tangent point
+        Vector3D correctionVector = tangentPoint - pm.last_position;
+        
+        //3. Finally, let the point mass's new position by its last_position adjusted
+        //   by the above correction vector scaled down by friction (1 - f)
+        pm.position = (1.0 - friction) * correctionVector + pm.last_position;
     }
 }
 
